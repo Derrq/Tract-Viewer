@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, forwardRef } from "react";
 import { Typography, AppBar, Button, CssBaseline, Toolbar, Box } from '@mui/material'
 import PageviewRounded from '@mui/icons-material/PageviewRounded';
+import CircularProgress from "@mui/material/CircularProgress";
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -79,7 +80,7 @@ function App() {
                       </TableRow>
                     ))
                   ))
-                } <Typography align="center" variant="h4"> Loading . . . </Typography>
+                }  <Box ><CircularProgress sx={{ maxWidth: 650, alignContent: "center", alignItems: "center", justifyContent:"center"}} /></Box>
               </TableBody>
             </Table>
           </TableContainer>
