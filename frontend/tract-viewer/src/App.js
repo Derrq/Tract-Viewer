@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, forwardRef } from "react";
 import { Typography, AppBar, Button, CssBaseline, Toolbar, Box } from '@mui/material'
 import PageviewRounded from '@mui/icons-material/PageviewRounded';
-import CircularProgress from "@mui/material/CircularProgress";
+import LinearProgress from '@mui/material/LinearProgress';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -43,9 +43,9 @@ function App() {
           </Typography>
 
           <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table" >
-              <TableHead>
-                <TableRow>
+            <Table sx={{ minWidth: 650 }} stickyHeader aria-label="sticky table" >
+              <TableHead >
+                <TableRow >
                   <TableCell sx={{width:'1px'}} align="left"><b> FID </b></TableCell>
                   <TableCell align="left"><b> TRACT CE </b></TableCell>
                   <TableCell align="left"><b> GEO ID </b></TableCell>
@@ -80,10 +80,11 @@ function App() {
                       </TableRow>
                     ))
                   ))
-                }  <Box ><CircularProgress sx={{ maxWidth: 650, alignContent: "center", alignItems: "center", justifyContent:"center"}} /></Box>
+                }
               </TableBody>
             </Table>
           </TableContainer>
+          <LinearProgress sx={{ width: '100%'}} />
           <TractDetailModal
             isShowing={isShowing}
             hide={toggle}
