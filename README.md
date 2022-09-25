@@ -11,6 +11,7 @@ Using Flask powered Back-End  to access GEO packages and display results on a Re
 
 **To Run Front end:**
 - cd frontend/tract-viewer
+- npm install
 - npm start
 - You should have your front end running on port 3000 now
 
